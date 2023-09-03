@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+    </head>
+    <body>
+        <h1>Pets</h1>
+        {% if pets %}
+        <section class="section-pets">
+            {% for pet in pets %}
+            <div class="pet">
+                {% if pet.photo_url %}
+                    <img src="{{pet.photo_url}}" />
+                {% endif %}
+                <p>{{pet.name}} <strong>is available!</strong></p>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+    </body>
+</html>
