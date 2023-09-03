@@ -1,6 +1,6 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
-from models import db
+from models import db, Pet
 
 # Create new instance of Flask application.
 app = Flask(__name__)
@@ -15,3 +15,11 @@ debug = DebugToolbarExtension(app)
 
 
 db.init_app(app)
+
+
+# Routes
+@app.route('/')
+def home_page():
+    '''List all pets.'''
+    pets = Pet.query.all()
+    return render_template('index.html', pets=pets)
