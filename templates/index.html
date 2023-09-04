@@ -3,11 +3,11 @@
 {% block content %}
 <h1 class="display-1">Pets</h1>
         {% if pets %}
-        <section class="section-pets">
+        <section class="d-flex flex-wrap justify-content-between gap-4">
             {% for pet in pets %}
             <div class="pet">
                 {% if pet.photo_url %}
-                    <img src="{{pet.photo_url}}" />
+                    <img src="{{pet.photo_url}}" class="img-fluid mb-2" />
                 {% endif %}
                 <p>{{pet.name}} <strong>is available!</strong></p>
             </div>
