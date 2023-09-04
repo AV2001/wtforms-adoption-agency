@@ -10,9 +10,9 @@ with app.app_context():
     Pet.query.delete()
 
 # Add data for pets
-pet1 = Pet(name='Woofly', species='Dog')
-pet2 = Pet(name='Porchetta', species='Porcupine')
-pet3 = Pet(name='Snargle', species='Cat')
+pet1 = Pet(name='Woofly', species='dog')
+pet2 = Pet(name='Porchetta', species='porcupine')
+pet3 = Pet(name='Snargle', species='cat')
 
 data = [pet1, pet2, pet3]
 
