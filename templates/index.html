@@ -9,7 +9,7 @@
                 {% if pet.photo_url %}
                     <img src="{{pet.photo_url}}" class="img-fluid mb-2" />
                 {% endif %}
-                <p>{{pet.name}} <strong>is available!</strong></p>
+                <p><a href="/edit/{{pet.id}}">{{pet.name}}</a> <strong>is available!</strong></p>
             </div>
             {% endfor %}
         </section>
